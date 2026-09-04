@@ -2,6 +2,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
+const scheduleUrl = 'https://calendar.app.google/AEpf5q75ekxHX1mP8';
+
 export const metadata: Metadata = {
   title: 'Página não encontrada',
   description: 'A página que você tentou acessar não foi encontrada.',
@@ -18,7 +20,7 @@ export default function NotFound() {
         <Link href="/" aria-label="Tessila — página inicial">
           <img src="/assets/tessila-logo.svg" alt="Tessila" />
         </Link>
-        <Link className="not-found-nav-link" href="/#contato">Falar com a Tessila</Link>
+        <a className="not-found-nav-link" href={scheduleUrl} target="_blank" rel="noopener noreferrer">Agendar uma conversa</a>
       </header>
 
       <section className="not-found-content">
@@ -46,6 +48,7 @@ export default function NotFound() {
 
       <footer className="not-found-footer">
         <span>© 2026 Tessila</span>
+        <a href="mailto:contato@tessila.com">contato@tessila.com</a>
         <span>Uma visão única dos dados, sem mover nenhuma peça.</span>
       </footer>
     </main>

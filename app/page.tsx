@@ -10,6 +10,7 @@ const sources = [
 ];
 
 const defaultQuestion = 'Como evoluíram as internações por diabetes na rede em comparação com a região?';
+const scheduleUrl = 'https://calendar.app.google/AEpf5q75ekxHX1mP8';
 
 function DemoApp() {
   const [phase, setPhase] = useState(0);
@@ -270,7 +271,7 @@ export default function Home() {
           <a href="#demonstracao">Demonstração</a>
           <a href="#governanca">Governança</a>
         </nav>
-        <a className="button button-small" href="#contato">Falar com a Tessila</a>
+        <a className="button button-small" href={scheduleUrl} target="_blank" rel="noopener noreferrer">Agendar uma conversa</a>
       </header>
 
       <section className="hero" id="top">
@@ -444,13 +445,13 @@ export default function Home() {
       <section className="cta-section" id="contato">
         <div className="cta-pattern" aria-hidden="true"><img src="/assets/tessila-symbol.svg" alt="" /></div>
         <div className="cta-copy"><span className="section-label light">Próximo passo</span><h2>Que pergunta sua rede ainda não consegue responder?</h2><p>Conte o cenário. A primeira conversa serve para entender as fontes, a governança e qual prova de valor faz sentido.</p></div>
-        <a className="button button-light" href="mailto:contato@tessila.com?subject=Quero%20conhecer%20a%20Tessila">Solicitar uma conversa <span>→</span></a>
+        <a className="button button-light" href={scheduleUrl} target="_blank" rel="noopener noreferrer">Agendar uma conversa <span>→</span></a>
       </section>
 
       <footer>
         <div className="footer-brand"><img src="/assets/tessila-logo.svg" alt="Tessila" /><p>Uma visão única dos dados, sem mover nenhuma peça.</p></div>
         <div className="footer-links"><a href="#como-funciona">Como funciona</a><a href="#governanca">Governança</a><a href="#sobre">Sobre</a><a href="#perguntas-frequentes">Perguntas frequentes</a></div>
-        <div className="footer-meta"><span>© 2026 Tessila</span><span>Data fabric federado para saúde</span></div>
+        <div className="footer-meta"><span>© 2026 Tessila</span><a href="mailto:contato@tessila.com">contato@tessila.com</a><span>Data fabric federado para saúde</span></div>
       </footer>
     </main>
   );

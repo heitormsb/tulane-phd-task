@@ -437,6 +437,7 @@ footer { width: min(1180px, calc(100% - 40px)); display: grid; grid-template-col
 .footer-links { display: flex; align-items: start; gap: 28px; color: #46536c; font-size: 13px; font-weight: 650; }
 .footer-links a:hover { color: var(--blue); }
 .footer-meta { grid-column: 1 / -1; display: flex; justify-content: space-between; padding-top: 24px; border-top: 1px solid #e1e7ef; color: #8490a2; font-size: 11px; }
+.footer-meta a:hover { color: var(--blue); }
 
 .content-page { min-height: 100vh; background: linear-gradient(180deg, #f7faff 0, #fff 680px); }
 .content-nav { width: min(1120px, calc(100% - 40px)); min-height: 92px; display: flex; align-items: center; gap: 32px; margin: 0 auto; }
@@ -600,6 +601,7 @@ footer { width: min(1180px, calc(100% - 40px)); display: grid; grid-template-col
   color: #7c889b;
   font-size: 11px;
 }
+.not-found-footer a:hover { color: var(--blue); }
 
 @media (max-width: 1040px) {
   .site-header nav { display: none; }
