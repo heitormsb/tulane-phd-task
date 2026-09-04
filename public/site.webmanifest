@@ -1,0 +1,19 @@
+{
+  "name": "Tessila — Data fabric federado para saúde",
+  "short_name": "Tessila",
+  "description": "Consulta federada de dados para instituições de saúde, sem centralizar as bases.",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
+

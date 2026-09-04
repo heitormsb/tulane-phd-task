@@ -1,0 +1,20 @@
+# Tessila
+
+> A Tessila é um data fabric federado para saúde. A plataforma permite consultar e combinar respostas de hospitais, laboratórios, fontes públicas e outros sistemas autorizados sem centralizar as bases de dados.
+
+## Informações principais
+
+- Site oficial: https://tessila.com/
+- Contato: contato@tessila.com
+
+## Princípios
+
+- Os dados permanecem na instituição de origem.
+- Cada organização define suas próprias permissões e políticas.
+- Somente respostas autorizadas são consolidadas.
+- As consultas são rastreáveis e auditáveis.
+- A Tessila não exige a criação de um repositório central com todos os dados.
+
+## Público
+
+Instituições de saúde, redes hospitalares, laboratórios, centros de pesquisa, equipes de dados, tecnologia, qualidade e governança.

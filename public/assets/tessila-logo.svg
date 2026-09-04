@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 930 240" role="img" aria-labelledby="title desc">
+  <title id="title">Logo horizontal Tessila</title>
+  <desc id="desc">Identidade visual oficial da Tessila, baseada nas referências aprovadas.</desc>
+  <defs>
+
+    <linearGradient id="hwordDark" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#101B48"/><stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="htile0" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34318A"/><stop offset="1" stop-color="#2F2E6E"/>
+    </linearGradient>
+    <linearGradient id="htile1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1F54E6"/><stop offset="1" stop-color="#2F78F2"/>
+    </linearGradient>
+    <linearGradient id="htile2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#2580EE"/>
+    </linearGradient>
+    <linearGradient id="htile3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#168894"/><stop offset="1" stop-color="#35A9AF"/>
+    </linearGradient>
+    <linearGradient id="htile4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#69B96F"/><stop offset="1" stop-color="#8BD57F"/>
+    </linearGradient>
+    <linearGradient id="htile5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5964CF"/><stop offset="1" stop-color="#7A84E4"/>
+    </linearGradient>
+    <linearGradient id="htile6" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8EABE5"/><stop offset="1" stop-color="#B5CAF2"/>
+    </linearGradient>
+    <linearGradient id="htile7" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0DA99E"/><stop offset="1" stop-color="#25C2B4"/>
+    </linearGradient>
+    <linearGradient id="htile8" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#B9CAEF"/><stop offset="1" stop-color="#DCE5FF"/>
+    </linearGradient>
+    <linearGradient id="htile9" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#A3D8AD"/><stop offset="1" stop-color="#C6E9CA"/>
+    </linearGradient>
+    <linearGradient id="hstem" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1497A1"/><stop offset="1" stop-color="#2BA8B0"/>
+    </linearGradient>
+    <linearGradient id="hnetwork" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2563EB" stop-opacity="0.22"/>
+      <stop offset="0.5" stop-color="#14B8A6" stop-opacity="0.36"/>
+      <stop offset="1" stop-color="#7BC88F" stop-opacity="0.20"/>
+    </linearGradient>
+    <filter id="htileShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="1.2" stdDeviation="1.25" flood-color="#0F172A" flood-opacity="0.15"/>
+    </filter>
+    <filter id="hwordShadow" x="-5%" y="-15%" width="110%" height="135%">
+      <feDropShadow dx="0" dy="1" stdDeviation="0.8" flood-color="#2563EB" flood-opacity="0.15"/>
+    </filter>
+    <filter id="hcardShadow" x="-30%" y="-30%" width="160%" height="175%">
+      <feDropShadow dx="0" dy="8" stdDeviation="13" flood-color="#8799B8" flood-opacity="0.16"/>
+    </filter>
+
+  </defs>
+  <g aria-label="Símbolo Tessila">
+    <path d="M111.75 62.6667 L122.167 73.0833" fill="none" stroke="#DCE5FF" stroke-width="2.39583" stroke-linecap="round" opacity="0.75"/>
+    <path d="M174.25 62.6667 L163.833 73.0833" fill="none" stroke="#DCE5FF" stroke-width="2.39583" stroke-linecap="round" opacity="0.75"/>
+    <path d="M111.75 114.75 L122.167 125.167" fill="none" stroke="#DCE5FF" stroke-width="2.39583" stroke-linecap="round" opacity="0.75"/>
+    <path d="M174.25 114.75 L163.833 125.167" fill="none" stroke="#DCE5FF" stroke-width="2.39583" stroke-linecap="round" opacity="0.75"/>
+    <rect x="18" y="21" width="41.6667" height="41.6667" rx="8.54167" fill="url(#htile0)" filter="url(#htileShadow)"/>
+    <rect x="70.0833" y="21" width="41.6667" height="41.6667" rx="8.54167" fill="url(#htile1)" filter="url(#htileShadow)"/>
+    <rect x="122.167" y="21" width="41.6667" height="41.6667" rx="8.54167" fill="url(#htile2)" filter="url(#htileShadow)"/>
+    <rect x="174.25" y="21" width="41.6667" height="41.6667" rx="8.54167" fill="url(#htile3)" filter="url(#htileShadow)"/>
+    <rect x="226.333" y="21" width="41.6667" height="41.6667" rx="8.54167" fill="url(#htile4)" filter="url(#htileShadow)"/>
+    <rect x="18" y="73.0833" width="41.6667" height="41.6667" rx="8.54167" fill="url(#htile5)" filter="url(#htileShadow)"/>
+    <rect x="70.0833" y="73.0833" width="41.6667" height="41.6667" rx="8.54167" fill="url(#htile6)" filter="url(#htileShadow)"/>
+    <rect x="122.167" y="73.0833" width="41.6667" height="41.6667" rx="8.54167" fill="url(#htile7)" filter="url(#htileShadow)"/>
+    <rect x="174.25" y="73.0833" width="41.6667" height="41.6667" rx="8.54167" fill="url(#htile8)" filter="url(#htileShadow)"/>
+    <rect x="226.333" y="73.0833" width="41.6667" height="41.6667" rx="8.54167" fill="url(#htile9)" filter="url(#htileShadow)"/>
+    <rect x="122.167" y="125.167" width="41.6667" height="41.6667" rx="8.54167" fill="url(#hstem)" filter="url(#htileShadow)"/>
+    <rect x="122.167" y="177.25" width="41.6667" height="41.6667" rx="8.54167" fill="url(#hstem)" filter="url(#htileShadow)"/>
+  </g>
+  <g fill="url(#hwordDark)" filter="url(#hwordShadow)">
+    <path d="M298 0Q289 0 283.5 6.0Q278 12 278 20V676H318V20Q318 12 312.0 6.0Q306 0 298 0ZM55 662Q47 662 41.0 667.5Q35 673 35 681Q35 689 41.0 694.5Q47 700 55 700H541Q549 700 555.0 694.5Q561 689 561 681Q561 672 555.0 667.0Q549 662 541 662Z" transform="translate(317 190) scale(0.182 -0.182)"/>
+    <path d="M308 -10Q233 -10 175.5 22.0Q118 54 85.0 112.5Q52 171 52 250Q52 334 84.5 393.0Q117 452 168.5 483.5Q220 515 278 515Q320 515 360.0 501.5Q400 488 431.5 459.5Q463 431 482.5 388.5Q502 346 504 287Q504 279 498.0 272.5Q492 266 484 266H76L70 304H473L463 295V313Q458 366 429.5 402.0Q401 438 361.0 456.5Q321 475 278 475Q248 475 215.0 461.5Q182 448 154.0 420.5Q126 393 108.5 351.0Q91 309 91 253Q91 192 115.5 141.0Q140 90 188.5 59.0Q237 28 308 28Q342 28 372.0 39.5Q402 51 426.0 70.0Q450 89 465 111Q473 120 482 120Q489 120 494.0 114.5Q499 109 499 102Q499 95 495 90Q464 50 415.5 20.0Q367 -10 308 -10Z" transform="translate(425.472 190) scale(0.182 -0.182)"/>
+    <path d="M55 80Q48 92 48.5 99.5Q49 107 56 112Q61 117 69.5 116.5Q78 116 84 109Q110 72 150.5 49.0Q191 26 246 26Q279 26 309.5 37.0Q340 48 359.5 70.0Q379 92 379 124Q379 158 360.0 178.5Q341 199 311.0 211.0Q281 223 248 231Q213 240 181.5 251.5Q150 263 126.0 280.5Q102 298 88.0 322.0Q74 346 74 379Q74 418 95.0 449.0Q116 480 154.0 497.5Q192 515 242 515Q266 515 293.0 509.0Q320 503 347.0 488.5Q374 474 397 448Q405 442 404.5 433.5Q404 425 397 418Q391 414 384.0 414.0Q377 414 372 420Q346 449 311.5 463.0Q277 477 238 477Q205 477 176.5 466.0Q148 455 130.0 433.5Q112 412 112 379Q114 348 133.5 328.0Q153 308 185.5 295.0Q218 282 259 271Q292 263 320.5 252.5Q349 242 370.5 226.0Q392 210 404.5 186.0Q417 162 417 126Q417 84 394.5 53.5Q372 23 332.5 6.5Q293 -10 242 -10Q190 -10 142.0 11.0Q94 32 55 80Z" transform="translate(526.664 190) scale(0.182 -0.182)"/>
+    <path d="M55 80Q48 92 48.5 99.5Q49 107 56 112Q61 117 69.5 116.5Q78 116 84 109Q110 72 150.5 49.0Q191 26 246 26Q279 26 309.5 37.0Q340 48 359.5 70.0Q379 92 379 124Q379 158 360.0 178.5Q341 199 311.0 211.0Q281 223 248 231Q213 240 181.5 251.5Q150 263 126.0 280.5Q102 298 88.0 322.0Q74 346 74 379Q74 418 95.0 449.0Q116 480 154.0 497.5Q192 515 242 515Q266 515 293.0 509.0Q320 503 347.0 488.5Q374 474 397 448Q405 442 404.5 433.5Q404 425 397 418Q391 414 384.0 414.0Q377 414 372 420Q346 449 311.5 463.0Q277 477 238 477Q205 477 176.5 466.0Q148 455 130.0 433.5Q112 412 112 379Q114 348 133.5 328.0Q153 308 185.5 295.0Q218 282 259 271Q292 263 320.5 252.5Q349 242 370.5 226.0Q392 210 404.5 186.0Q417 162 417 126Q417 84 394.5 53.5Q372 23 332.5 6.5Q293 -10 242 -10Q190 -10 142.0 11.0Q94 32 55 80Z" transform="translate(611.294 190) scale(0.182 -0.182)"/>
+    <path d="M123 20Q123 12 117.0 6.0Q111 0 103 0Q94 0 88.5 6.0Q83 12 83 20V495Q83 503 89.0 509.0Q95 515 103 515Q112 515 117.5 509.0Q123 503 123 495ZM103 583Q87 583 77.5 592.0Q68 601 68 615V623Q68 637 78.0 646.0Q88 655 104 655Q118 655 127.5 646.0Q137 637 137 623V615Q137 601 127.5 592.0Q118 583 103 583Z" transform="translate(695.924 190) scale(0.182 -0.182)"/>
+    <path d="M128 20Q128 12 122.0 6.0Q116 0 108 0Q99 0 93.5 6.0Q88 12 88 20V720Q88 728 94.0 734.0Q100 740 108 740Q117 740 122.5 734.0Q128 728 128 720Z" transform="translate(733.416 190) scale(0.182 -0.182)"/>
+    <path d="M496 499Q505 499 510.5 493.0Q516 487 516 479V20Q516 12 510.0 6.0Q504 0 496 0Q487 0 481.5 6.0Q476 12 476 20V162L492 175Q492 143 476.0 110.0Q460 77 432.0 50.0Q404 23 366.0 6.5Q328 -10 284 -10Q217 -10 164.5 25.0Q112 60 82.0 120.0Q52 180 52 255Q52 331 82.5 389.5Q113 448 165.5 481.5Q218 515 284 515Q327 515 365.0 499.5Q403 484 431.5 456.0Q460 428 476.0 390.5Q492 353 492 309L476 334V479Q476 487 481.5 493.0Q487 499 496 499ZM286 28Q342 28 386.0 57.5Q430 87 455.0 138.5Q480 190 480 255Q480 317 455.0 367.5Q430 418 386.0 447.5Q342 477 286 477Q231 477 187.0 448.5Q143 420 117.5 370.0Q92 320 92 255Q92 190 117.0 138.5Q142 87 186.0 57.5Q230 28 286 28Z" transform="translate(772.728 190) scale(0.182 -0.182)"/>
+  </g>
+</svg>

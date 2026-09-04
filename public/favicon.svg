@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Favicon Tessila</title>
+  <desc id="desc">Identidade visual oficial da Tessila, baseada nas referências aprovadas.</desc>
+  <defs>
+
+    <linearGradient id="fwordDark" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#101B48"/><stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="ftile0" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34318A"/><stop offset="1" stop-color="#2F2E6E"/>
+    </linearGradient>
+    <linearGradient id="ftile1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1F54E6"/><stop offset="1" stop-color="#2F78F2"/>
+    </linearGradient>
+    <linearGradient id="ftile2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#2580EE"/>
+    </linearGradient>
+    <linearGradient id="ftile3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#168894"/><stop offset="1" stop-color="#35A9AF"/>
+    </linearGradient>
+    <linearGradient id="ftile4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#69B96F"/><stop offset="1" stop-color="#8BD57F"/>
+    </linearGradient>
+    <linearGradient id="ftile5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5964CF"/><stop offset="1" stop-color="#7A84E4"/>
+    </linearGradient>
+    <linearGradient id="ftile6" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8EABE5"/><stop offset="1" stop-color="#B5CAF2"/>
+    </linearGradient>
+    <linearGradient id="ftile7" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0DA99E"/><stop offset="1" stop-color="#25C2B4"/>
+    </linearGradient>
+    <linearGradient id="ftile8" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#B9CAEF"/><stop offset="1" stop-color="#DCE5FF"/>
+    </linearGradient>
+    <linearGradient id="ftile9" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#A3D8AD"/><stop offset="1" stop-color="#C6E9CA"/>
+    </linearGradient>
+    <linearGradient id="fstem" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1497A1"/><stop offset="1" stop-color="#2BA8B0"/>
+    </linearGradient>
+    <linearGradient id="fnetwork" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2563EB" stop-opacity="0.22"/>
+      <stop offset="0.5" stop-color="#14B8A6" stop-opacity="0.36"/>
+      <stop offset="1" stop-color="#7BC88F" stop-opacity="0.20"/>
+    </linearGradient>
+    <filter id="ftileShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="1.2" stdDeviation="1.25" flood-color="#0F172A" flood-opacity="0.15"/>
+    </filter>
+    <filter id="fwordShadow" x="-5%" y="-15%" width="110%" height="135%">
+      <feDropShadow dx="0" dy="1" stdDeviation="0.8" flood-color="#2563EB" flood-opacity="0.15"/>
+    </filter>
+    <filter id="fcardShadow" x="-30%" y="-30%" width="160%" height="175%">
+      <feDropShadow dx="0" dy="8" stdDeviation="13" flood-color="#8799B8" flood-opacity="0.16"/>
+    </filter>
+
+  </defs>
+  <rect width="128" height="128" rx="25" fill="#FFFFFF"/>
+  <g aria-label="Símbolo Tessila">
+    <path d="M50.5 42 L55 46.5" fill="none" stroke="#DCE5FF" stroke-width="1.035" stroke-linecap="round" opacity="0.5"/>
+    <path d="M77.5 42 L73 46.5" fill="none" stroke="#DCE5FF" stroke-width="1.035" stroke-linecap="round" opacity="0.5"/>
+    <path d="M50.5 64.5 L55 69" fill="none" stroke="#DCE5FF" stroke-width="1.035" stroke-linecap="round" opacity="0.5"/>
+    <path d="M77.5 64.5 L73 69" fill="none" stroke="#DCE5FF" stroke-width="1.035" stroke-linecap="round" opacity="0.5"/>
+    <rect x="10" y="24" width="18" height="18" rx="3.69" fill="url(#ftile0)"/>
+    <rect x="32.5" y="24" width="18" height="18" rx="3.69" fill="url(#ftile1)"/>
+    <rect x="55" y="24" width="18" height="18" rx="3.69" fill="url(#ftile2)"/>
+    <rect x="77.5" y="24" width="18" height="18" rx="3.69" fill="url(#ftile3)"/>
+    <rect x="100" y="24" width="18" height="18" rx="3.69" fill="url(#ftile4)"/>
+    <rect x="10" y="46.5" width="18" height="18" rx="3.69" fill="url(#ftile5)"/>
+    <rect x="32.5" y="46.5" width="18" height="18" rx="3.69" fill="url(#ftile6)"/>
+    <rect x="55" y="46.5" width="18" height="18" rx="3.69" fill="url(#ftile7)"/>
+    <rect x="77.5" y="46.5" width="18" height="18" rx="3.69" fill="url(#ftile8)"/>
+    <rect x="100" y="46.5" width="18" height="18" rx="3.69" fill="url(#ftile9)"/>
+    <rect x="55" y="69" width="18" height="18" rx="3.69" fill="url(#fstem)"/>
+    <rect x="55" y="91.5" width="18" height="18" rx="3.69" fill="url(#fstem)"/>
+  </g>
+</svg>
