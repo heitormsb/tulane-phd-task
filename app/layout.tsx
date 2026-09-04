@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://tessila.com'),
+  metadataBase: new URL('https://www.tessila.com'),
   title: {
     default: 'Tessila | Data fabric federado para saúde',
     template: '%s | Tessila',
@@ -54,14 +54,14 @@ const organizationStructuredData = {
   '@graph': [
     {
       '@type': 'Organization',
-      '@id': 'https://tessila.com/#organization',
+      '@id': 'https://www.tessila.com/#organization',
       name: 'Tessila',
-      url: 'https://tessila.com/',
+      url: 'https://www.tessila.com/',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://tessila.com/assets/tessila-symbol.svg',
+        url: 'https://www.tessila.com/assets/tessila-symbol.svg',
       },
-      image: 'https://tessila.com/og.png',
+      image: 'https://www.tessila.com/og.png',
       email: 'contato@tessila.com',
       description: 'Empresa de tecnologia que oferece uma camada federada para consultar dados de saúde onde eles já estão, preservando governança e controle institucional.',
       contactPoint: {
@@ -73,24 +73,24 @@ const organizationStructuredData = {
     },
     {
       '@type': 'WebSite',
-      '@id': 'https://tessila.com/#website',
-      url: 'https://tessila.com/',
+      '@id': 'https://www.tessila.com/#website',
+      url: 'https://www.tessila.com/',
       name: 'Tessila',
       description: 'Data fabric federado para saúde.',
       inLanguage: 'pt-BR',
-      publisher: { '@id': 'https://tessila.com/#organization' },
+      publisher: { '@id': 'https://www.tessila.com/#organization' },
     },
     {
       '@type': 'SoftwareApplication',
-      '@id': 'https://tessila.com/#software',
+      '@id': 'https://www.tessila.com/#software',
       name: 'Tessila',
-      url: 'https://tessila.com/',
+      url: 'https://www.tessila.com/',
       applicationCategory: 'BusinessApplication',
       applicationSubCategory: 'Data fabric federado para saúde',
       operatingSystem: 'Web',
       inLanguage: 'pt-BR',
       description: 'Plataforma de consulta federada que conecta dados de instituições de saúde e outras fontes autorizadas sem criar uma base centralizada.',
-      provider: { '@id': 'https://tessila.com/#organization' },
+      provider: { '@id': 'https://www.tessila.com/#organization' },
       audience: {
         '@type': 'Audience',
         audienceType: 'Instituições de saúde, redes hospitalares e centros de pesquisa',

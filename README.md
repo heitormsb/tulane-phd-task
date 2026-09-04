@@ -30,4 +30,4 @@ O projeto já inclui `vercel.json` e o adaptador necessário. Importe a pasta/re
 
 Antes da publicação, confirme o endereço `contato@tessila.com` usado no botão final e ajuste-o em `app/page.tsx` se necessário.
 
-Depois de publicar no domínio definitivo, valide `https://tessila.com/sitemap.xml` e cadastre-o no Google Search Console e no Bing Webmaster Tools. O projeto assume `https://tessila.com` como endereço canônico; se o domínio final mudar, atualize `app/layout.tsx` e os arquivos `public/robots.txt`, `public/sitemap.xml` e `public/llms.txt`.
+Depois de publicar no domínio definitivo, valide `https://www.tessila.com/sitemap.xml` e cadastre-o no Google Search Console e no Bing Webmaster Tools. O projeto assume `https://www.tessila.com` como endereço canônico; se o domínio final mudar, atualize `app/layout.tsx` e os arquivos `public/robots.txt`, `public/sitemap.xml` e `public/llms.txt`.

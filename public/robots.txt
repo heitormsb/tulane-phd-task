@@ -13,5 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://tessila.com/sitemap.xml
-
+Sitemap: https://www.tessila.com/sitemap.xml
