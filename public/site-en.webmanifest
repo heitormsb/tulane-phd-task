@@ -1,7 +1,7 @@
 {
-  "name": "Tessila — Federated data fabric for healthcare",
+  "name": "Tessila — Data for healthcare analysis and research",
   "short_name": "Tessila",
-  "description": "Federated data queries for healthcare institutions without centralizing their databases.",
+  "description": "Connect, organize and share healthcare data for analysis and research.",
   "lang": "en",
   "start_url": "/en",
   "display": "standalone",

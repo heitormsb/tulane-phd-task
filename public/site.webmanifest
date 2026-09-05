@@ -1,7 +1,7 @@
 {
-  "name": "Tessila — Data fabric federado para saúde",
+  "name": "Tessila — Dados para análise e pesquisa em saúde",
   "short_name": "Tessila",
-  "description": "Consulta federada de dados para instituições de saúde, sem centralizar as bases.",
+  "description": "Conexão, organização e compartilhamento de dados de saúde para análise e pesquisa.",
   "lang": "pt-BR",
   "start_url": "/",
   "display": "standalone",
@@ -16,4 +16,3 @@
     }
   ]
 }
-

@@ -35,7 +35,7 @@ export default function LocalizedNotFound({ locale }: { locale: Locale }) {
           <p>{copy.notFound.description}</p>
           <div className="not-found-actions">
             <Link className="button" href={homeUrl}>{copy.notFound.back} <span>→</span></Link>
-            <Link className="text-link" href={`${homeUrl === '/' ? '' : homeUrl}#demonstracao`}>{copy.notFound.demo}</Link>
+            <Link className="text-link" href={`${homeUrl}#demonstracao`}>{copy.notFound.demo}</Link>
           </div>
         </div>
 

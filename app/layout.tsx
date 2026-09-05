@@ -2,6 +2,7 @@ import { headers } from 'next/headers';
 import './globals.css';
 import { defaultLocale, isLocale, localeHeaderName } from './i18n';
 import { createLandingMetadata } from './i18n/metadata';
+import ConversionAnalytics from './components/landing/ConversionAnalytics';
 
 export const metadata = createLandingMetadata('pt-BR');
 
@@ -19,7 +20,7 @@ const organizationStructuredData = {
       },
       image: 'https://www.tessila.com/og.png',
       email: 'contato@tessila.com',
-      description: 'Empresa de tecnologia que oferece uma camada federada para consultar dados de saúde onde eles já estão, preservando governança e controle institucional.',
+      description: 'Tecnologia para conectar, organizar e compartilhar dados de saúde para análise e pesquisa.',
       contactPoint: {
         '@type': 'ContactPoint',
         email: 'contato@tessila.com',
@@ -32,7 +33,7 @@ const organizationStructuredData = {
       '@id': 'https://www.tessila.com/#website',
       url: 'https://www.tessila.com/',
       name: 'Tessila',
-      description: 'Data fabric federado para saúde.',
+      description: 'Dados para análise e pesquisa em saúde.',
       inLanguage: ['pt-BR', 'en'],
       publisher: { '@id': 'https://www.tessila.com/#organization' },
     },
@@ -42,21 +43,22 @@ const organizationStructuredData = {
       name: 'Tessila',
       url: 'https://www.tessila.com/',
       applicationCategory: 'BusinessApplication',
-      applicationSubCategory: 'Data fabric federado para saúde',
+      applicationSubCategory: 'Dados para análise e pesquisa em saúde',
       operatingSystem: 'Web',
       inLanguage: ['pt-BR', 'en'],
-      description: 'Plataforma de consulta federada que conecta dados de instituições de saúde e outras fontes autorizadas sem criar uma base centralizada.',
+      description: 'Plataforma para conectar informações de diferentes sistemas, organizar dados de saúde e compartilhá-los com equipes autorizadas para análise e pesquisa.',
       provider: { '@id': 'https://www.tessila.com/#organization' },
       audience: {
         '@type': 'Audience',
-        audienceType: 'Instituições de saúde, redes hospitalares e centros de pesquisa',
+        audienceType: 'Hospitais, clínicas, laboratórios, gestores públicos e centros de pesquisa',
       },
       featureList: [
-        'Consulta federada de dados',
-        'Dados permanecem na origem',
-        'Políticas de acesso locais',
-        'Resultados consolidados',
-        'Rastreabilidade de consultas',
+        'Consulta aos dados na origem por padrão',
+        'Análise conjunta de informações de diferentes sistemas',
+        'Organização de informações com critérios comuns',
+        'Conjuntos de dados preparados apenas a pedido da equipe',
+        'Preservação da versão usada em uma pesquisa',
+        'Compartilhamento com destinatários autorizados e registros de acesso',
       ],
     },
   ],
@@ -72,6 +74,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }} />
         {children}
+        <ConversionAnalytics enabled={process.env.NODE_ENV === 'production' && process.env.TESSILA_ANALYTICS_ENABLED === 'true'} locale={locale} />
       </body>
     </html>
   );

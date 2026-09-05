@@ -13,9 +13,11 @@
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "typecheck": "tsc --noEmit --incremental false",
     "check:i18n": "node scripts/check-i18n.mjs",
-    "verify": "npm run lint && npm run typecheck && npm run check:i18n"
+    "verify": "npm run lint && npm run typecheck && npm run check:i18n && npm run check:simulation",
+    "check:simulation": "node scripts/check-simulation.mjs"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "next": "16.3.4",
     "react": "19.2.8",
     "react-dom": "19.2.8"

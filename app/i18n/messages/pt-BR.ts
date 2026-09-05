@@ -1,234 +1,452 @@
 const ptBR = {
-  htmlLang: 'pt-BR',
-  metadata: {
-    title: 'Tessila | Data fabric federado para saúde',
-    description: 'A Tessila é um data fabric federado para saúde que conecta e governa dados distribuídos para consultas, dashboards e insights sem centralizar as fontes.',
-    category: 'Tecnologia para saúde',
-    socialDescription: 'Conecte e governe dados de hospitais e outras fontes para criar consultas, dashboards e insights sem centralizar nenhuma base.',
-    twitterDescription: 'Dados federados para consultas, dashboards e insights em saúde, sem centralizar as fontes.',
-    imageAlt: 'Tessila — Uma visão única dos dados, sem mover nenhuma peça.',
+  "htmlLang": "pt-BR",
+  "metadata": {
+    "title": "Tessila | Dados de saúde conectados para análise e pesquisa",
+    "description": "Reúna dados de hospitais, clínicas, laboratórios e fontes públicas. Organize informações para análise e pesquisa com compartilhamento controlado. Conheça a Tessila.",
+    "category": "Tecnologia para saúde",
+    "socialDescription": "Hospitais, clínicas, laboratórios e dados públicos: informações conectadas para análise e pesquisa. Conheça a Tessila.",
+    "twitterDescription": "Conecte, organize e compartilhe dados de saúde para análise e pesquisa.",
+    "imageAlt": "Tessila — Dados conectados. Novas respostas."
   },
-  switcher: {
-    label: 'Idioma',
-    ariaLabel: 'Selecionar idioma do site',
-    switchToPortuguese: 'Português selecionado',
-    switchToEnglish: 'Mudar o idioma para inglês',
+  "switcher": {
+    "label": "Idioma",
+    "ariaLabel": "Selecionar idioma do site",
+    "switchToPortuguese": "Português selecionado",
+    "switchToEnglish": "Mudar o idioma para inglês"
   },
-  sources: [
-    { id: 'aurora', name: 'Hospital Aurora', detail: 'Internações · 18.420 registros', kind: 'Hospital', system: 'FHIR / SQL', icon: '+', color: 'indigo', series: [62, 68, 65, 72, 74, 79] },
-    { id: 'helena', name: 'Santa Helena', detail: 'Internações · 12.806 registros', kind: 'Hospital', system: 'FHIR', icon: '+', color: 'blue', series: [58, 61, 67, 64, 71, 75] },
-    { id: 'publica', name: 'Dados públicos de saúde', detail: 'Indicadores regionais', kind: 'Fonte aberta', system: 'API pública', icon: '◎', color: 'teal', series: [60, 62, 63, 65, 67, 69] },
+  "nav": {
+    "how": "Como funciona",
+    "demo": "Experimente",
+    "governance": "Controle e acesso",
+    "schedule": "Agendar demo",
+    "skip": "Ir para o conteúdo"
+  },
+  "hero": {
+    "eyebrow": "Para equipes de saúde, pesquisa e dados",
+    "title": "Uma visão única dos seus dados de saúde,",
+    "emphasis": "sem mover nenhuma peça.",
+    "description": "Conecte informações de hospitais, clínicas, laboratórios e fontes públicas. Consulte os dados na origem por padrão e organize uma visão conjunta para análise e pesquisa.",
+    "schedule": "Agendar demonstração",
+    "duration": "30 min · por videochamada",
+    "tryDemo": "Explorar um exemplo",
+    "dataOrigin": "Sem exigir a troca dos seus sistemas",
+    "governance": "Compartilhamento com acesso controlado",
+    "caption": "Da clínica aos dados públicos: informações que se complementam."
+  },
+  "heroNetwork": {
+    "ariaLabel": "Exemplo de fontes conectadas à Tessila para organizar informações e responder perguntas",
+    "hospitalA": "Hospital",
+    "clinicalData": "Dados clínicos",
+    "hospitalB": "Clínica",
+    "visits": "Atendimentos",
+    "publicSource": "Dados públicos",
+    "regionalContext": "Contexto da região",
+    "otherSources": "Mais conexões",
+    "oneQuery": "Dados conectados",
+    "governedFederated": "conceitos em comum",
+    "consolidatedAnswer": "Uma visão útil",
+    "withoutCopying": "para análise e pesquisa",
+    "policiesApplied": "acesso definido",
+    "auditableRecord": "origem rastreável"
+  },
+  "plain": {
+    "ariaLabel": "Um exemplo do dia a dia",
+    "title": "Como entender os atendimentos de uma região?",
+    "description": "Hospitais e clínicas registram os atendimentos. Laboratórios reúnem os exames. Dados públicos ajudam a conhecer a população. A Tessila permite organizar essas informações para olhar o cenário em conjunto.",
+    "before": "Em lugares diferentes",
+    "inputs": [
+      "Hospital e clínica",
+      "Laboratório",
+      "Dados públicos"
+    ],
+    "after": "Na mesma análise",
+    "result": "Atendimentos e contexto da região"
+  },
+  "audience": {
+    "label": "Comece por uma pergunta real",
+    "title": "O que sua equipe",
+    "emphasis": "precisa descobrir?",
+    "description": "A tecnologia começa a fazer sentido quando ajuda a resolver uma tarefa do seu dia a dia.",
+    "cards": [
+      {
+        "tag": "Gestão em saúde",
+        "title": "Comparar informações entre unidades",
+        "description": "Reúna os atendimentos de hospitais e clínicas e use informações públicas para entender melhor a região.",
+        "outcome": "Menos consolidação manual"
+      },
+      {
+        "tag": "Pesquisa",
+        "title": "Encontrar dados para um estudo",
+        "description": "Prepare registros de instituições de saúde e laboratórios com critérios comuns e preserve a versão usada no estudo.",
+        "outcome": "Resultados que podem ser reproduzidos"
+      },
+      {
+        "tag": "Equipes de dados",
+        "title": "Reutilizar o trabalho já feito",
+        "description": "Padronize informações uma vez e compartilhe conjuntos preparados com as pessoas autorizadas.",
+        "outcome": "Uma base de trabalho para novos projetos"
+      }
+    ]
+  },
+  "process": {
+    "label": "Como funciona",
+    "title": "Conectar. Organizar.",
+    "emphasis": "Usar em conjunto.",
+    "description": "Sua equipe escolhe as fontes e o que precisa analisar. A Tessila ajuda a preparar esse caminho.",
+    "cards": [
+      {
+        "icon": "+",
+        "title": "Conecte o que já existe",
+        "description": "Comece pelas informações relevantes para seu projeto, sejam da instituição, de parceiros ou de fontes públicas.",
+        "example": "Exemplo: uma clínica e dados públicos da região"
+      },
+      {
+        "icon": "=",
+        "title": "Use os mesmos critérios",
+        "description": "Organize as informações para que sua equipe possa comparar períodos e instituições de forma consistente.",
+        "example": "Exemplo: contar atendimentos do mesmo período"
+      },
+      {
+        "icon": "↗",
+        "title": "Use e compartilhe",
+        "description": "Consulte os dados na origem por padrão. Se sua equipe solicitar um conjunto preparado, ele terá versão definida, acesso controlado e registrado.",
+        "example": "Exemplo: a mesma versão para toda a pesquisa"
+      }
+    ]
+  },
+  "demoSection": {
+    "label": "Experimente em um minuto",
+    "title": "Uma pergunta.",
+    "emphasis": "Diferentes fontes.",
+    "description": "Explore fontes como hospitais, clínicas e dados públicos. Adicione outras instituições e veja os registros selecionados no Dashboard.",
+    "ctaTitle": "Quer ver esse caminho no produto?",
+    "ctaDescription": "Na demonstração, percorremos as conexões, a organização dos dados e o compartilhamento.",
+    "ctaAction": "Ver com a minha equipe"
+  },
+  "sources": [
+    {
+      "id": "aurora",
+      "name": "Hospital Aurora",
+      "detail": "Atendimentos e exames",
+      "kind": "Hospital",
+      "icon": "+",
+      "color": "indigo"
+    },
+    {
+      "id": "helena",
+      "name": "Clínica Santa Helena",
+      "detail": "Consultas e exames",
+      "kind": "Clínica",
+      "icon": "+",
+      "color": "blue"
+    },
+    {
+      "id": "regional",
+      "name": "Dados públicos",
+      "detail": "População da região · exemplo",
+      "kind": "Fonte pública",
+      "icon": "◎",
+      "color": "teal"
+    }
   ],
-  demo: {
-    additionalSources: [
-      { id: 'laboratorio', name: 'Laboratório parceiro', detail: 'Exames · 9.430 registros', kind: 'Laboratório', system: 'HL7 / FHIR', icon: '⌁', color: 'green', series: [48, 54, 57, 63, 68, 72] },
-      { id: 'pesquisa', name: 'Registro de pesquisa', detail: 'Coortes autorizadas', kind: 'Pesquisa', system: 'API segura', icon: '◇', color: 'violet', series: [52, 56, 60, 66, 70, 76] },
+  "demo": {
+    "additionalSources": [
+      {
+        "id": "atlas",
+        "name": "Laboratório Atlas",
+        "detail": "Atendimentos e exames · fictícios",
+        "kind": "Laboratório",
+        "icon": "◇",
+        "color": "green"
+      },
+      {
+        "id": "vale",
+        "name": "Clínica do Vale",
+        "detail": "Consultas e exames · fictícios",
+        "kind": "Clínica",
+        "icon": "+",
+        "color": "violet"
+      }
     ],
-    defaultQuestion: 'Como evoluíram as internações por diabetes na rede em comparação com a região?',
-    result: {
-      readmission: { detail: 'de reinternação na rede selecionada' },
-      cohort: { detail: 'pacientes atendem aos critérios' },
-      hospitalization: { value: '12% abaixo', detail: 'da média regional de internações' },
-      fallback: { value: 'Resposta pronta', detail: 'indicadores autorizados foram consolidados' },
-    },
-    keywords: {
-      readmission: ['reintern'],
-      cohort: ['coorte', 'critério', 'quantos pacientes'],
-      hospitalization: ['intern', 'diabetes', 'região'],
-    },
-    hospitalKind: 'Hospital',
-    hospitalSingular: 'hospital',
-    hospitalPlural: 'hospitais',
-    publicSource: '1 fonte pública',
-    sourceSingular: 'fonte',
-    sourcePlural: 'fontes',
-    statuses: ['Pronta para executar', 'Distribuindo', 'Aplicando regras', 'Combinando', 'Respondido'],
-    auditEvents: [
-      { phase: 1, title: 'Solicitação distribuída', text: 'fontes receberam a solicitação.' },
-      { phase: 2, title: 'Políticas locais aplicadas', text: 'Cada fonte validou finalidade e permissão.' },
-      { phase: 3, title: 'Resultados autorizados recebidos', text: 'Somente indicadores agregados retornaram.' },
-      { phase: 4, title: 'Visão consolidada', text: 'A resposta e o dashboard foram registrados para auditoria.' },
+    "scenarios": [
+      {
+        "id": "visits",
+        "label": "Comparar atendimentos",
+        "question": "Quantos atendimentos foram registrados em junho nas instituições selecionadas?",
+        "resultLabel": "atendimentos em junho",
+        "chartTitle": "Atendimentos por instituição",
+        "unit": "Atendimentos",
+        "explanation": "Somamos os atendimentos de junho das instituições selecionadas. O gráfico mostra a evolução de janeiro a junho. Uma pessoa pode ter mais de um atendimento."
+      },
+      {
+        "id": "cohort",
+        "label": "Preparar uma pesquisa",
+        "question": "Quantos registros de junho atendem aos mesmos critérios para uma pesquisa?",
+        "resultLabel": "registros elegíveis em junho",
+        "chartTitle": "Registros para pesquisa, por instituição",
+        "unit": "Registros",
+        "explanation": "Exemplo de critério comum: registros de adultos com diabetes e exame disponível. São registros por instituição, não uma contagem de pessoas únicas entre as fontes."
+      },
+      {
+        "id": "exams",
+        "label": "Acompanhar exames",
+        "question": "Quantos exames foram realizados em junho nas instituições selecionadas?",
+        "resultLabel": "exames realizados em junho",
+        "chartTitle": "Exames por instituição",
+        "unit": "Exames",
+        "explanation": "Somamos os exames de junho das instituições selecionadas. Um atendimento pode incluir vários exames. O gráfico ajuda a acompanhar a demanda ao longo dos meses."
+      }
     ],
-    ariaLabel: 'Simulação ilustrativa do funcionamento da Tessila',
-    tabsAriaLabel: 'Áreas da simulação',
-    tabs: ['Consulta', 'Dashboard', 'Fontes', 'Auditoria'],
-    safeEnvironment: 'Ambiente seguro',
-    sourcesAriaLabel: 'Fontes conectadas',
-    querySources: 'Fontes conectadas',
-    activeSingular: 'ativa',
-    activePlural: 'ativas',
-    dataAtSource: 'Dados na origem',
-    noTransfer: 'Nenhuma base é transferida.',
-    queryLabel: 'Escreva uma pergunta para esta rede',
-    queryPlaceholder: 'Digite aqui uma pergunta sobre os dados da rede…',
-    generateQuestion: 'Gerar pergunta de exemplo',
-    writeQuestion: 'Escreva uma pergunta',
-    selectSource: 'Selecione uma fonte',
-    runQuery: 'Executar consulta',
-    querying: 'Consultando…',
-    runAgain: 'Executar novamente',
-    remove: 'Remover',
-    add: 'Adicionar',
-    fromQuery: 'da consulta',
-    federatedOrchestrator: 'Orquestrador federado',
-    applyingPolicies: 'Aplicando políticas locais',
-    combiningAnswers: 'Combinando respostas',
-    consolidatedInsight: 'Insight consolidado',
-    answer: 'Resposta',
-    activateSource: 'Ative uma fonte para começar.',
-    runToVisualize: 'Execute a consulta para visualizar.',
-    dataStays: 'Os dados continuam em cada fonte.',
-    progress: ['Pergunta distribuída', 'Regras aplicadas', 'Respostas combinadas'],
-    dashboardPanel: {
-      eyebrow: 'Visão operacional',
-      title: 'Dashboard federado da rede',
-      description: 'Os indicadores são calculados sobre as fontes ativas, sem reunir os dados brutos em uma nova base.',
-      consolidatedResult: 'Resultado consolidado',
-      participatingSources: 'Fontes participantes',
-      centralizedDatabases: 'Bases centralizadas',
-      trendTitle: 'Cobertura autorizada por fonte',
-      trendDescription: 'Percentual dos registros relevantes disponíveis para a visão atual',
-      currentQuestion: 'Pergunta em análise',
-      periods: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
-      indexLabel: 'cobertura',
-      sourceCoverage: 'Cobertura das fontes',
-      included: 'Incluída',
-      excluded: 'Fora desta visão',
-      governedNote: 'Cada indicador usa somente resultados autorizados e mantém o rastro do processamento.',
+    "ariaLabel": "Exemplo interativo com dados fictícios",
+    "tabsAriaLabel": "Áreas do exemplo",
+    "tabs": [
+      "Pergunta",
+      "Dashboard",
+      "Fontes",
+      "Registro"
+    ],
+    "safeEnvironment": "Dados fictícios",
+    "scenarioLabel": "1. Escolha uma pergunta",
+    "querySources": "2. Selecione as fontes",
+    "sourcesAriaLabel": "Fontes participantes",
+    "activeSingular": "ativo",
+    "activePlural": "ativos",
+    "dataAtSource": "Diferentes tipos de informação",
+    "noTransfer": "Instituições mostram a atividade. Dados públicos ajudam a entender a região.",
+    "queryLabel": "A pergunta deste exemplo",
+    "selectSource": "Selecione uma fonte",
+    "runQuery": "Ver passo a passo",
+    "querying": "Em andamento…",
+    "runAgain": "Rever passo a passo",
+    "remove": "Remover",
+    "add": "Adicionar",
+    "fromQuery": "do exemplo",
+    "toQuery": "ao exemplo",
+    "federatedOrchestrator": "Conectando informações",
+    "applyingPolicies": "Usando critérios comuns",
+    "combiningAnswers": "Combinando resultados",
+    "answer": "Resposta",
+    "activateSource": "Selecione um hospital, uma clínica ou um laboratório para ver o passo a passo.",
+    "runToVisualize": "Veja como a resposta é formada.",
+    "dataStays": "Consultando as fontes selecionadas.",
+    "consolidatedInsight": "Resultado do exemplo",
+    "sourceSingular": "fonte",
+    "sourcePlural": "fontes",
+    "institutionSingular": "instituição",
+    "institutionPlural": "instituições",
+    "progress": [
+      "Consultar fontes",
+      "Aplicar critérios",
+      "Combinar resultados"
+    ],
+    "statuses": [
+      "Pronto para executar",
+      "Consultando",
+      "Organizando",
+      "Combinando",
+      "Resposta pronta"
+    ],
+    "viewResult": "Explorar o Dashboard",
+    "periodLabel": "Período: janeiro a junho · dados fictícios",
+    "periods": [
+      "Jan",
+      "Fev",
+      "Mar",
+      "Abr",
+      "Mai",
+      "Jun"
+    ],
+    "auditEvents": [
+      {
+        "phase": 1,
+        "title": "Fontes selecionadas",
+        "text": "Somente as fontes selecionadas participam do exemplo."
+      },
+      {
+        "phase": 2,
+        "title": "Critérios comuns",
+        "text": "O mesmo critério é usado nas instituições selecionadas."
+      },
+      {
+        "phase": 3,
+        "title": "Resultados combinados",
+        "text": "Os registros das instituições selecionadas formam a resposta."
+      },
+      {
+        "phase": 4,
+        "title": "Execução concluída",
+        "text": "Este registro ilustra as etapas; não é uma auditoria de dados reais."
+      }
+    ],
+    "dashboardPanel": {
+      "eyebrow": "Entenda a resposta",
+      "title": "Os números da sua pergunta",
+      "description": "O indicador e o gráfico respondem à pergunta selecionada.",
+      "consolidatedResult": "Resultado de junho",
+      "participatingSources": "Fontes participantes",
+      "currentQuestion": "Pergunta selecionada",
+      "sourceCoverage": "Participação por fonte",
+      "included": "Incluído",
+      "excluded": "Fora da consulta",
+      "governedNote": "Valores calculados com os dados fictícios das instituições selecionadas.",
+      "awaiting": "Selecione um hospital, uma clínica ou um laboratório para explorar o Dashboard.",
+      "showValues": "Ver valores em tabela",
+      "month": "Mês",
+      "value": "Valor",
+      "chartCaption": "Dados fictícios. Cada linha representa uma instituição selecionada.",
+      "ready": "Atualiza com sua seleção",
+      "chooseSources": "Escolher fontes",
+      "awaitingActivity": "Para ver os números de atendimentos, pesquisa ou exames, selecione também um hospital, uma clínica ou um laboratório.",
+      "source": "Instituição"
     },
-    sourcesPanel: {
-      eyebrow: 'Configuração da rede',
-      title: 'Escolha quais fontes participam',
-      description: 'Ative, remova ou adicione fontes. A consulta, o dashboard e o registro usam a mesma configuração.',
-      selected: 'selecionadas',
-      included: 'Incluída',
-      add: 'Adicionar',
-      action: 'Usar estas fontes',
-      addSource: 'Adicionar fonte',
-      addSourceDescription: 'Inclua outra fonte fictícia para ver toda a simulação se adaptar.',
-      allAdded: 'Todas as fontes disponíveis foram adicionadas.',
+    "sourcesPanel": {
+      "eyebrow": "Fontes do exemplo",
+      "title": "Escolha quem participa",
+      "description": "Hospitais, clínicas, laboratórios e fontes públicas podem contribuir de formas diferentes. Selecione as fontes que fazem sentido para sua pergunta.",
+      "selected": "Selecionado",
+      "included": "Incluído",
+      "add": "Adicionar",
+      "action": "Usar estas fontes",
+      "addSource": "Adicionar fonte",
+      "addSourceDescription": "Inclua um laboratório ou outra clínica neste exemplo. No produto, as fontes são escolhidas conforme o seu projeto.",
+      "allAdded": "Todas as fontes deste exemplo foram adicionadas. Na demonstração, podemos conversar sobre as fontes do seu projeto."
     },
-    auditPanel: {
-      eyebrow: 'Registro da simulação',
-      title: 'Veja o rastro do processamento',
-      description: 'Consulta e dashboard compartilham o mesmo registro, sem expor os dados das instituições.',
-      clear: 'Limpar registro',
-      waiting: 'Aguardando uma execução.',
-      backAndRun: 'Voltar e executar uma consulta',
-      back: 'Voltar para a consulta',
+    "auditPanel": {
+      "eyebrow": "Registro ilustrativo",
+      "title": "Entenda cada etapa",
+      "description": "Acompanhe as etapas desta simulação. No produto, os registros de acesso apoiam a rastreabilidade do compartilhamento.",
+      "clear": "Limpar registro",
+      "waiting": "Aguardando execução.",
+      "backAndRun": "Voltar e executar",
+      "back": "Voltar à pergunta"
     },
-    fictitiousData: 'Simulação com dados inteiramente fictícios',
-    authorizedOnly: 'O resultado recebe apenas indicadores autorizados, nunca os prontuários completos.',
+    "fictitiousData": "Simulação guiada · instituições e dados fictícios",
+    "authorizedOnly": "Exemplo didático, não uma consulta ao produto. Nenhum dado real é solicitado.",
+    "selectActivitySource": "Selecione uma instituição"
   },
-  heroNetwork: {
-    ariaLabel: 'Hospitais, uma fonte pública e outras fontes conectados pela Tessila',
-    hospitalA: 'Hospital A',
-    clinicalData: 'Dados clínicos',
-    hospitalB: 'Hospital B',
-    visits: 'Atendimentos',
-    publicSource: 'Fonte pública',
-    regionalContext: 'Contexto regional',
-    otherSources: 'Outras fontes',
-    oneQuery: 'Uma consulta',
-    governedFederated: 'governada e federada',
-    consolidatedAnswer: 'Resposta consolidada',
-    withoutCopying: 'sem copiar as bases',
-    policiesApplied: 'políticas aplicadas',
-    auditableRecord: 'registro auditável',
+  "governance": {
+    "label": "Controle e confiança",
+    "title": "Compartilhe o que faz sentido.",
+    "emphasis": "Com quem pode acessar.",
+    "description": "Conjuntos preparados são criados apenas a pedido da sua equipe, com versão definida, destinatários autorizados e acesso registrado.",
+    "proofAria": "Exemplo de compartilhamento de um conjunto para pesquisa",
+    "query": "Conjunto para pesquisa",
+    "authorized": "Exemplo",
+    "steps": [
+      {
+        "label": "Destinatário",
+        "status": "Autorizado"
+      },
+      {
+        "label": "Versão",
+        "status": "Definida"
+      },
+      {
+        "label": "Acesso",
+        "status": "Registrado"
+      }
+    ],
+    "noCopy": "Versão consistente para a equipe",
+    "auditTrail": "Acesso rastreável",
+    "cards": [
+      {
+        "title": "Você define o conjunto",
+        "description": "Ao solicitar um conjunto preparado, escolha as informações e os critérios que a equipe precisa para análise ou compartilhamento."
+      },
+      {
+        "title": "Destinatários autorizados",
+        "description": "Defina quem pode acessar cada conjunto de dados compartilhado e gerencie essas permissões."
+      },
+      {
+        "title": "A mesma versão",
+        "description": "Cada conjunto preparado tem uma versão definida para que a equipe possa reproduzir a análise, mesmo quando a fonte evoluir."
+      },
+      {
+        "title": "Histórico de acesso",
+        "description": "Os acessos aos conjuntos compartilhados ficam registrados para que sua equipe possa acompanhar o uso."
+      }
+    ]
   },
-  faqs: [
-    { question: 'A Tessila cria um novo banco de dados?', answer: 'Não. A Tessila conecta e consulta as fontes existentes. Os dados permanecem nos sistemas de cada instituição; apenas a resposta autorizada volta para quem fez a pergunta.' },
-    { question: 'É preciso trocar os sistemas que o hospital já usa?', answer: 'Não. A proposta é integrar gradualmente as fontes atuais por conectores e padrões abertos, preservando investimentos, processos e responsabilidades já existentes.' },
-    { question: 'Quem decide o que pode ser consultado?', answer: 'A própria instituição dona do dado. Políticas locais definem quais fontes, campos, finalidades e perfis podem participar de cada consulta.' },
-    { question: 'Como a solução ajuda na LGPD?', answer: 'Ela reduz cópias desnecessárias, aplica regras antes da execução e mantém registros auditáveis. A conformidade completa também depende das bases legais, processos e controles definidos por cada organização.' },
-    { question: 'A simulação usa dados reais?', answer: 'Não. Todos os nomes, números e instituições exibidos nesta página são fictícios. Esta é apenas uma representação simples para explicar o conceito.' },
+  "evidence": {
+    "label": "Pesquisa aplicada à saúde",
+    "title": "Conhecimento científico.",
+    "emphasis": "Aplicação no dia a dia.",
+    "description": "A Tessila nasce da pesquisa sobre como reunir informações de saúde e prepará-las para análise. O propósito é ajudar equipes a transformar dados dispersos em uma base de trabalho compartilhada.",
+    "recognitionTitle": "Da pesquisa à próxima descoberta da sua equipe",
+    "recognitionDescription": "A Tessila aproxima a pesquisa dos desafios de quem precisa reunir dados e encontrar respostas. Sua base vem de um trabalho científico revisado por especialistas e aceito em uma das mais renomadas conferências de engenharia de software da América Latina.",
+    "aboutLabel": "Sobre a Tessila",
+    "aboutTitle": "Tecnologia que aproxima informações",
+    "aboutDescription": "A Tessila reúne conexão, organização e compartilhamento de dados em um mesmo fluxo, para apoiar equipes de saúde, pesquisa e tecnologia.",
+    "aboutAction": "Conhecer a Tessila",
+    "nameNote": "O nome vem de tessera, uma peça de mosaico: informações distintas que passam a compor uma visão útil."
+  },
+  "faqs": [
+    {
+      "question": "Preciso entender de tecnologia para usar a Tessila?",
+      "answer": "Você pode começar pela pergunta que sua equipe precisa responder. A conexão e a preparação das fontes exigem configuração técnica; a demonstração mostra como esse trabalho pode ser dividido entre sua equipe e quem cuida dos dados."
+    },
+    {
+      "question": "Posso usar dados de clínicas, laboratórios ou fontes públicas?",
+      "answer": "Sim, o projeto pode reunir informações de diferentes instituições e fontes públicas, como dados sobre a população de uma região. Na primeira conversa, avaliamos quais informações você quer usar, as condições de acesso e o que será necessário para conectá-las."
+    },
+    {
+      "question": "É preciso trocar os sistemas que já usamos?",
+      "answer": "A proposta é trabalhar com os sistemas que sua instituição já usa. Na primeira conversa, avaliamos quais informações estão disponíveis, como acessá-las e o que será necessário para conectá-las à Tessila."
+    },
+    {
+      "question": "Os dados ficam na origem ou são armazenados?",
+      "answer": "Por padrão, a Tessila consulta os dados nos sistemas de origem, sem criar uma cópia permanente. Um conjunto de dados preparado só é criado e armazenado quando sua equipe solicita, para análise, pesquisa ou compartilhamento. Esse conjunto tem versão definida, acesso controlado e registro de acessos."
+    },
+    {
+      "question": "Quem pode acessar os dados compartilhados?",
+      "answer": "A equipe responsável escolhe quais informações serão compartilhadas e quem poderá acessá-las. A Tessila permite controlar esses acessos e manter um histórico de uso."
+    },
+    {
+      "question": "Como a Tessila apoia os cuidados com dados de saúde?",
+      "answer": "A seleção de informações, o controle do compartilhamento e os registros de acesso ajudam a organizar o uso dos dados. As bases legais, responsabilidades e demais controles de proteção precisam ser definidos pela instituição; a plataforma não garante conformidade por si só."
+    },
+    {
+      "question": "O exemplo da página é o produto real?",
+      "answer": "Não. O exemplo usa perguntas prontas, instituições e dados fictícios, inclusive na fonte pública. Você pode adicionar fontes e explorar o Dashboard desde o início. A demonstração por videochamada mostra o produto e como conectar, organizar e compartilhar os dados."
+    },
+    {
+      "question": "Como funciona a primeira demonstração?",
+      "answer": "São 30 minutos por videochamada para conhecer seu cenário, percorrer o produto e avaliar um primeiro caso de uso. Você não precisa trazer dados de pacientes: uma descrição das fontes e da pergunta que quer responder é suficiente."
+    }
   ],
-  nav: { how: 'Como funciona', demo: 'Simulação', governance: 'Governança', schedule: 'Agendar uma conversa' },
-  hero: {
-    eyebrow: 'Data fabric federado para saúde',
-    title: 'Uma visão única dos dados,',
-    emphasis: 'sem mover nenhuma peça.',
-    description: 'A Tessila conecta e governa dados onde eles já estão. Cada instituição mantém o controle, enquanto consultas, dashboards e análises usam resultados autorizados sem cópias desnecessárias.',
-    tryDemo: 'Ver uma simulação',
-    understand: 'Entender em 60 segundos',
-    dataOrigin: 'Dados permanecem na origem',
-    governance: 'Governança e LGPD desde o início',
-    caption: 'Hospitais e fontes externas, conectados sem centralizar os dados',
+  "faqSection": {
+    "label": "Perguntas frequentes",
+    "title": "O que você precisa saber",
+    "emphasis": "para começar.",
+    "description": "Do primeiro contato às decisões sobre os dados."
   },
-  plain: {
-    ariaLabel: 'Tessila em uma frase',
-    title: 'Conecte os dados, não crie outra migração.',
-    description: 'Em vez de reunir prontuários em outro repositório, a Tessila cria uma camada federada para consultar dados, acompanhar indicadores e gerar insights sobre as fontes existentes.',
-    sources: 'fontes', copies: 'cópias', answer: 'resposta',
+  "cta": {
+    "label": "Vamos olhar para o seu cenário",
+    "title": "Qual pergunta seus dados poderiam responder?",
+    "description": "Em 30 minutos, conhecemos suas fontes, mostramos o produto e conversamos sobre um primeiro caso de uso.",
+    "action": "Agendar demonstração",
+    "note": "Videochamada · sem precisar enviar dados de pacientes",
+    "email": "Prefere escrever?"
   },
-  process: {
-    label: 'Como funciona', title: 'Conecte, organize e use.', emphasis: 'Sem criar outro silo.',
-    description: 'A Tessila forma uma camada de dados sobre as fontes existentes, aplicando governança antes de entregar informação para diferentes usos.',
-    cards: [
-      { icon: '+', title: 'Conecte as fontes', description: 'Hospitais, laboratórios, sistemas internos e fontes externas entram na rede sem migração para uma base central.', example: 'Cada fonte mantém controle e contexto' },
-      { icon: '◇', title: 'Modele e governe os dados', description: 'A Tessila padroniza conceitos, aplica permissões e prepara visões reutilizáveis sobre os dados distribuídos.', example: 'Uma regra consistente para cada uso' },
-      { icon: '↗', title: 'Entregue dados e decisões', description: 'As mesmas visões autorizadas podem alimentar consultas, dashboards, indicadores e análises.', example: 'Do dado conectado ao insight rastreável' },
-    ],
+  "notFound": {
+    "metaTitle": "Página não encontrada",
+    "metaDescription": "A página que você tentou acessar não foi encontrada.",
+    "homeAria": "Tessila — página inicial",
+    "schedule": "Agendar uma conversa",
+    "error": "Erro 404",
+    "title": "Essa peça não faz parte deste mosaico.",
+    "description": "A página pode ter mudado de endereço ou o link está incorreto. Volte à página inicial para conhecer a Tessila.",
+    "back": "Voltar para o início",
+    "demo": "Ver a simulação"
   },
-  demoSection: {
-    label: 'Simulação ilustrativa', title: 'Veja os dados ganharem contexto.', emphasis: 'Sem sair da origem.',
-    description: 'Conecte as fontes, execute uma consulta e veja os mesmos resultados autorizados alimentarem um dashboard ilustrativo da rede.',
-  },
-  architecture: {
-    label: 'Uma imagem simples', title: 'Várias peças.', emphasis: 'Uma resposta.',
-    description: 'Cada organização continua cuidando da própria peça. A rede pode crescer com novas fontes autorizadas conforme a necessidade, incluindo hospitais, laboratórios, fontes públicas e outros sistemas. A Tessila combina as respostas sem centralizar os dados.',
-    checks: ['Conecta fontes heterogêneas', 'Executa políticas antes da consulta', 'Entrega resultados agregados'],
-    ariaLabel: 'Diagrama: hospitais e fonte pública conectados à Tessila e a uma resposta consolidada',
-    mapLabel: 'Mapa federado · 3 fontes neste exemplo',
-    sources: [
-      { name: 'Hospital Aurora', detail: 'Dados clínicos', icon: '+' },
-      { name: 'Laboratório parceiro', detail: 'Resultados de exames', icon: '⌁' },
-      { name: 'Fonte pública', detail: 'Contexto regional', icon: '◎' },
-    ],
-    question: 'pergunta', federatedQuery: 'Consulta federada', answersOnly: 'somente respostas', result: 'Resultado', indicators: 'indicadores combinados', noCopies: '0 bases copiadas',
-  },
-  governance: {
-    label: 'Governança desde o primeiro clique', title: 'Controle não é uma etapa depois.', emphasis: 'É parte da consulta.',
-    description: 'O modelo federado reduz movimentações desnecessárias e torna cada decisão verificável.',
-    proofAria: 'Exemplo de registro de uma consulta governada', query: 'Consulta #T-024', authorized: 'Autorizada',
-    steps: [{ label: 'Identidade', status: 'Verificada' }, { label: 'Políticas locais', status: 'Aplicadas' }, { label: 'Resultado', status: 'Registrado' }],
-    noCopy: 'Nenhuma base foi copiada', auditTrail: 'Trilha auditável',
-    cards: [
-      { title: 'O dado não muda de dono', description: 'A instituição mantém custódia, contexto e responsabilidade sobre suas informações.' },
-      { title: 'Permissão antes da execução', description: 'Cada consulta respeita finalidade, perfil de acesso e política local.' },
-      { title: 'Rastreabilidade ponta a ponta', description: 'Quem perguntou, o que foi consultado e qual resposta foi entregue ficam registrados.' },
-      { title: 'Menos superfície de risco', description: 'Menos cópias significam menos repositórios extras para proteger e administrar.' },
-    ],
-  },
-  audience: {
-    label: 'Onde a Tessila ajuda', title: 'Da operação à pesquisa,', emphasis: 'sem outro silo.',
-    description: 'A mesma camada de acesso pode servir consultas, dashboards e análises diferentes sem criar uma cópia nova para cada projeto.',
-    cards: [
-      { tag: 'Redes de saúde', title: 'Visão entre unidades', description: 'Entenda jornadas, produção e populações atendidas em hospitais e unidades distintas.', outcome: 'Gestão integrada →' },
-      { tag: 'Pesquisa', title: 'Coortes multicêntricas', description: 'Descubra a viabilidade de estudos em múltiplas instituições antes de movimentar dados sensíveis.', outcome: 'Pesquisa federada →' },
-      { tag: 'Qualidade', title: 'Indicadores confiáveis', description: 'Compare padrões assistenciais com regras claras e resultados rastreáveis.', outcome: 'Decisão baseada em dados →' },
-      { tag: 'Tecnologia', title: 'Integração sustentável', description: 'Conecte fontes existentes sem substituir tudo nem manter pipelines de cópia para sempre.', outcome: 'Operação simples →' },
-    ],
-  },
-  values: {
-    label: 'Por que Tessila?', title: 'Cada peça preservada.', emphasis: 'A imagem completa.',
-    descriptionStart: '“Tessila” vem de', term: 'tessera', descriptionEnd: ', a pequena peça de um mosaico. É a ideia central do produto: dados separados continuam onde estão, mas passam a formar uma visão útil em conjunto.',
-  },
-  faqSection: { label: 'Perguntas frequentes', title: 'O essencial,', emphasis: 'sem jargão.', description: 'Respostas diretas para entender a proposta antes de entrar nos detalhes técnicos.' },
-  cta: {
-    label: 'Próximo passo', title: 'Que pergunta sua rede ainda não consegue responder?',
-    description: 'Conte o cenário. A primeira conversa serve para entender as fontes, a governança e qual prova de valor faz sentido.', action: 'Agendar uma conversa',
-  },
-  notFound: {
-    metaTitle: 'Página não encontrada', metaDescription: 'A página que você tentou acessar não foi encontrada.',
-    homeAria: 'Tessila — página inicial', schedule: 'Agendar uma conversa', error: 'Erro 404',
-    title: 'Essa peça não faz parte deste mosaico.',
-    description: 'A página pode ter mudado de endereço ou o link está incorreto. A landing page da Tessila continua logo no início.',
-    back: 'Voltar para o início', demo: 'Ver a simulação',
-  },
-  footer: {
-    tagline: 'Uma visão única dos dados, sem mover nenhuma peça.', how: 'Como funciona', governance: 'Governança', about: 'Sobre', faq: 'Perguntas frequentes', product: 'Data fabric federado para saúde',
-  },
+  "footer": {
+    "tagline": "Dados conectados. Novas respostas.",
+    "how": "Como funciona",
+    "governance": "Controle e acesso",
+    "about": "Sobre a Tessila",
+    "faq": "Perguntas frequentes",
+    "product": "Dados para análise e pesquisa em saúde"
+  }
 };
 
 export type SiteCopy = typeof ptBR;

@@ -9,6 +9,7 @@ export function createLandingMetadata(locale: Locale): Metadata {
   const copy = siteCopy[locale];
   const isEnglish = locale === 'en';
   const pageUrl = localeRoutes[locale];
+  const socialImage = isEnglish ? '/og-en.png' : '/og.png';
 
   return {
     metadataBase: new URL(siteUrl),
@@ -47,13 +48,13 @@ export function createLandingMetadata(locale: Locale): Metadata {
       siteName: 'Tessila',
       title: copy.metadata.title,
       description: copy.metadata.socialDescription,
-      images: [{ url: '/og.png', width: 1200, height: 630, alt: copy.metadata.imageAlt }],
+      images: [{ url: socialImage, width: 1200, height: 630, alt: copy.metadata.imageAlt }],
     },
     twitter: {
       card: 'summary_large_image',
       title: copy.metadata.title,
       description: copy.metadata.twitterDescription,
-      images: ['/og.png'],
+      images: [socialImage],
     },
   };
 }

@@ -1,23 +1,22 @@
 # Tessila
 
-> A Tessila é um data fabric federado para saúde. A plataforma permite consultar e combinar respostas de hospitais, laboratórios, fontes públicas e outros sistemas autorizados sem centralizar as bases de dados.
+> A Tessila conecta informações de diferentes sistemas de saúde e organiza dados para análise e pesquisa, com compartilhamento controlado.
 
-A Tessila atende instituições de saúde, redes hospitalares, laboratórios, centros de pesquisa e equipes de dados, tecnologia, qualidade e governança.
+A plataforma ajuda equipes de saúde, pesquisa e dados a reunir informações de hospitais, clínicas, laboratórios e fontes públicas, preparar dados para estudos e reutilizar o trabalho de organização em novos projetos.
 
-Princípios da plataforma:
+A Tessila consulta os dados nos sistemas de origem por padrão, sem criar uma cópia permanente. Conjuntos de dados preparados só são criados e armazenados a pedido da equipe, para análise, pesquisa ou compartilhamento, com versão definida, acesso controlado e registro de acessos.
 
-- Os dados permanecem na instituição de origem.
-- Cada organização define suas próprias permissões e políticas.
-- Somente respostas autorizadas são consolidadas.
-- As consultas são rastreáveis e auditáveis.
-- A Tessila não exige a criação de um repositório central com todos os dados.
+O compartilhamento permite definir destinatários e versões, com registros de acesso. A conformidade com requisitos de proteção de dados também depende dos controles e responsabilidades da instituição.
 
-## Conteúdo principal
+A simulação da landing page usa três cenários guiados de atendimentos, pesquisa e exames, com instituições e dados inteiramente fictícios. A seleção inicial inclui um hospital, uma clínica e uma fonte pública sobre a população de uma região. É possível adicionar um laboratório e outra clínica. A população não é somada aos registros das instituições. O Dashboard pode ser explorado desde o início e se atualiza com a pergunta e as fontes selecionadas. O exemplo é didático, sem conexão com o produto ou dados de pacientes. A pesquisa que fundamenta a Tessila foi revisada por especialistas e aceita em uma das mais renomadas conferências de engenharia de software da América Latina. O reconhecimento se refere ao trabalho científico.
 
-- [Visão geral da Tessila](https://www.tessila.com/): Apresentação da plataforma, proposta de valor e principais aplicações.
-- [Tessila in English](https://www.tessila.com/en): English version of the landing page, interactive demonstration, governance principles and contact information.
-- [Como a consulta federada funciona](https://www.tessila.com/#como-funciona): Explicação simples do fluxo de consulta sem movimentação dos dados.
-- [Demonstração interativa](https://www.tessila.com/#demonstracao): Ambiente demonstrativo para entender como diferentes fontes participam de uma consulta.
-- [Governança e controle](https://www.tessila.com/#governanca): Informações sobre permissões, rastreabilidade, auditoria e LGPD.
-- [Perguntas frequentes](https://www.tessila.com/#perguntas-frequentes): Respostas sobre implantação, integração, segurança e operação.
-- [Contato com a Tessila](https://www.tessila.com/#contato): Canal para solicitar uma conversa com a equipe.
+- [Visão geral](https://www.tessila.com/)
+- [English](https://www.tessila.com/en)
+- [Como funciona](https://www.tessila.com/#como-funciona)
+- [Exemplo interativo](https://www.tessila.com/#demonstracao)
+- [Controle e acesso](https://www.tessila.com/#governanca)
+- [Pesquisa aplicada e sobre a Tessila](https://www.tessila.com/#sobre)
+- [Perguntas frequentes](https://www.tessila.com/#perguntas-frequentes)
+- [Demonstração de 30 minutos](https://www.tessila.com/#contato)
+
+Contato: contato@tessila.com
