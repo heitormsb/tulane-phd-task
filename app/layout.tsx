@@ -1,53 +1,9 @@
-import type { Metadata } from 'next';
+import { headers } from 'next/headers';
 import './globals.css';
+import { defaultLocale, isLocale, localeHeaderName } from './i18n';
+import { createLandingMetadata } from './i18n/metadata';
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://www.tessila.com'),
-  title: {
-    default: 'Tessila | Data fabric federado para saúde',
-    template: '%s | Tessila',
-  },
-  description: 'A Tessila é um data fabric federado para saúde que consulta dados em hospitais e outras fontes sem centralizá-los, com governança e rastreabilidade.',
-  applicationName: 'Tessila',
-  creator: 'Tessila',
-  publisher: 'Tessila',
-  category: 'Tecnologia para saúde',
-  alternates: {
-    canonical: '/',
-  },
-  icons: {
-    icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
-    shortcut: '/favicon.svg',
-    apple: '/favicon.svg',
-  },
-  manifest: '/site.webmanifest',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-      'max-video-preview': -1,
-    },
-  },
-  openGraph: {
-    type: 'website',
-    locale: 'pt_BR',
-    url: '/',
-    siteName: 'Tessila',
-    title: 'Tessila | Data fabric federado para saúde',
-    description: 'Consulte dados de hospitais e outras fontes onde eles já estão. Cada instituição mantém o controle e nenhuma base precisa ser centralizada.',
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Tessila — Uma visão única dos dados, sem mover nenhuma peça.' }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Tessila | Data fabric federado para saúde',
-    description: 'Consulta federada de dados para instituições de saúde, sem centralizar nenhuma base.',
-    images: ['/og.png'],
-  },
-};
+export const metadata = createLandingMetadata('pt-BR');
 
 const organizationStructuredData = {
   '@context': 'https://schema.org',
@@ -68,7 +24,7 @@ const organizationStructuredData = {
         '@type': 'ContactPoint',
         email: 'contato@tessila.com',
         contactType: 'comercial',
-        availableLanguage: ['Portuguese'],
+        availableLanguage: ['Portuguese', 'English'],
       },
     },
     {
@@ -77,7 +33,7 @@ const organizationStructuredData = {
       url: 'https://www.tessila.com/',
       name: 'Tessila',
       description: 'Data fabric federado para saúde.',
-      inLanguage: 'pt-BR',
+      inLanguage: ['pt-BR', 'en'],
       publisher: { '@id': 'https://www.tessila.com/#organization' },
     },
     {
@@ -88,7 +44,7 @@ const organizationStructuredData = {
       applicationCategory: 'BusinessApplication',
       applicationSubCategory: 'Data fabric federado para saúde',
       operatingSystem: 'Web',
-      inLanguage: 'pt-BR',
+      inLanguage: ['pt-BR', 'en'],
       description: 'Plataforma de consulta federada que conecta dados de instituições de saúde e outras fontes autorizadas sem criar uma base centralizada.',
       provider: { '@id': 'https://www.tessila.com/#organization' },
       audience: {
@@ -106,9 +62,13 @@ const organizationStructuredData = {
   ],
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const requestHeaders = await headers();
+  const requestedLocale = requestHeaders.get(localeHeaderName) ?? undefined;
+  const locale = isLocale(requestedLocale) ? requestedLocale : defaultLocale;
+
   return (
-    <html lang="pt-BR">
+    <html lang={locale}>
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }} />
         {children}

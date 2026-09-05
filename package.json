@@ -10,7 +10,10 @@
     "build": "vinext build",
     "build:vercel": "NITRO_PRESET=vercel vite build",
     "start": "vinext start",
-    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next"
+    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "typecheck": "tsc --noEmit --incremental false",
+    "check:i18n": "node scripts/check-i18n.mjs",
+    "verify": "npm run lint && npm run typecheck && npm run check:i18n"
   },
   "dependencies": {
     "next": "16.3.4",

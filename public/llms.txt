@@ -15,6 +15,7 @@ Princípios da plataforma:
 ## Conteúdo principal
 
 - [Visão geral da Tessila](https://www.tessila.com/): Apresentação da plataforma, proposta de valor e principais aplicações.
+- [Tessila in English](https://www.tessila.com/en): English version of the landing page, interactive demonstration, governance principles and contact information.
 - [Como a consulta federada funciona](https://www.tessila.com/#como-funciona): Explicação simples do fluxo de consulta sem movimentação dos dados.
 - [Demonstração interativa](https://www.tessila.com/#demonstracao): Ambiente demonstrativo para entender como diferentes fontes participam de uma consulta.
 - [Governança e controle](https://www.tessila.com/#governanca): Informações sobre permissões, rastreabilidade, auditoria e LGPD.
