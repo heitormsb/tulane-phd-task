@@ -1,56 +1,60 @@
-# Tessila — landing page
+# Tessila · site
 
-Landing page bilíngue para apresentar a conexão, organização e o compartilhamento de dados de saúde para análise e pesquisa. O conteúdo público usa linguagem simples e não divulga tecnologias de implementação do produto.
+O site da Tessila em www.tessila.com, em português (`/`, `/planos`) e inglês (`/en`, `/en/pricing`).
 
-## Conteúdo e conversão
-
-- Agendamento visível no cabeçalho e na primeira tela, inclusive no celular, com chamadas após a simulação e no fechamento.
-- Exemplos para gestão em saúde, pesquisa e equipes de dados.
-- Exemplo cotidiano: entender os atendimentos de uma região com informações de hospitais, clínicas, laboratórios e fontes públicas.
-- Slogan de abertura: “Uma visão única dos seus dados de saúde, sem mover nenhuma peça.” Consulta na origem por padrão; conjuntos preparados só são criados e armazenados a pedido da equipe, com versão definida, acesso controlado e registrado. Esse princípio aparece na abertura, no funcionamento, no compartilhamento e na FAQ, em ambos os idiomas.
-- Três cenários guiados: atendimentos, registros elegíveis para pesquisa e exames realizados.
-- Hospital, clínica e fonte pública fictícios na seleção inicial, com laboratório e outra clínica no catálogo. O botão Adicionar fonte está disponível a partir de qualquer aba. Gráfico e tabela usam os registros das instituições; a população da fonte pública não é somada aos registros. O Dashboard não exibe um bloco de texto sobre a população.
-- Dashboard disponível antes de executar o passo a passo, com atualização imediata pela seleção. Trocar a pergunta mantém a aba aberta; selecionar zero fontes mostra uma orientação para escolher fontes. Com apenas a fonte pública ativa, a página orienta a incluir uma instituição para ver seus registros.
-- Perguntas e indicadores se referem a junho; o gráfico e a tabela mostram janeiro a junho. A resposta informa apenas o número de instituições que fornecem os registros, enquanto a seleção de fontes também pode incluir dados públicos.
-- O passo a passo indica a etapa atual e termina com a resposta pronta. Limpar o registro preserva a pergunta e as fontes escolhidas. As mesmas regras valem em português e inglês.
-- Seção de pesquisa aplicada com a aceitação do trabalho científico após revisão por especialistas. O conteúdo não divulga o título, autores, evento, links do artigo, arquitetura ou resultados detalhados do experimento.
-- Apresentação institucional sem nome ou perfil pessoal.
-- FAQ, metadados sociais em português e inglês, sitemap, robots e llms.txt.
-
-## Desenvolvimento local
+## Rodar
 
 ```bash
 npm install
-npm run dev
+npm run dev        # http://localhost:3000
+npm run verify     # tipos, lint e formatação
+npm run build      # páginas estáticas
 ```
 
-## Verificação
+## Onde mexer
 
-```bash
-npm run verify
-npm run build:vercel
-```
+- **Textos**: `src/copy/pt.ts` e `src/copy/en.ts`, com a mesma forma. Os componentes não têm palavras soltas (o lint
+  barra). E-mail, link da agenda e domínio ficam em `src/copy/site.ts`.
+- **Posts de exemplo**: `src/content/library.ts` diz qual post aparece em cada parte da página. As imagens ficam em
+  `public/posts/{id}-{formato}.webp` e vêm da biblioteca do Studio, só de marcas fictícias (Grão da Rua, Pulso, Lume,
+  Bicho Manso, Agulha Fina, Horta Viva e outras). Nenhum post de empresa real.
+- **Posts nos dois idiomas**: os posts da criação, do mosaico do topo e do fechamento existem em português e em inglês
+  (`public/posts/{id}-{formato}-pt.webp` e `-en.webp`); no código, eles têm `bilingual: true`. A tradução troca só os
+  textos, então o design fica igual.
+- **Redes**: `src/components/networks-data.ts` tem as 15 redes em que a Tessila publica, com a marca de cada uma
+  (Simple Icons 13.21.0, domínio público). O site não cita o fornecedor da publicação.
+- **Estilo**: `src/app/globals.css`. Cores da identidade H1 (grafite, uma pedra lavanda, o lima do produto para a
+  ação), Fraunces Soft nos títulos e Instrument Sans no resto. As seções são folhas sobre o fundo.
+- **Pedras**: `src/components/stones.ts` vem das pedras do logo. Qualquer elemento vira uma pedra com
+  `clip-path: url(#stone-0)` até `#stone-3`.
+- **Imagens de compartilhamento**: `opengraph-image.png` em `src/app/(pt)/` e `src/app/(en)/en/`.
 
-`verify` cobre lint, TypeScript, paridade dos idiomas e consistência dos cálculos da simulação (contagens, separação do contexto público, seleção vazia, adição e exclusão de fontes).
+## A página inicial
 
-O build Vercel gera arquivos locais em `.vercel/output`; ele não publica o site. Push para GitHub e publicação dependem de aprovação do responsável pelo projeto.
+Segue a vida de um post:
 
-## Medição de interesse
+1. **Topo**: um mosaico vivo de posts e um cartão com um post saindo: pronto nos formatos, aprovado e agendado.
+2. **Redes**: o mesmo post no Instagram, no TikTok, no LinkedIn e no X, e as 15 redes.
+3. **Criação**: escolha uma marca de exemplo e veja o pedido e os seis designs que saíram dele.
+4. **Edição**: um editor pequeno; troca o formato e a camada selecionada.
+5. **Aprovação**: a fila de revisão aprova sozinha enquanto está na tela e o post cai no calendário; qualquer clique
+   passa o controle para quem está lendo.
+6. **Resultados**: três objetivos, gráfico desenhado em código, o que funcionou, o teste da semana e o número que
+   ainda não chegou. Dados de exemplo, marcados como tal.
+7. **Fechamento**: uma mão de cinco posts em leque, a demonstração e o e-mail.
 
-A integração com Vercel Web Analytics fica desativada por padrão e durante o desenvolvimento. Os eventos locais `tessila:conversion` podem ser observados sem transmitir dados:
+Com "reduzir movimento" ligado, nada anda sozinho: o mosaico para, a fila só anda com clique e o gráfico aparece pronto.
 
-- `contact_click`: posição da chamada e idioma.
-- `scenario_selected`: cenário escolhido e idioma.
-- `demo_started` e `demo_completed`: cenário, número de fontes e idioma.
+## Como o site é feito
 
-Não são enviados textos livres, dados de pacientes, nomes ou e-mails. A integração remove query string e fragmentos das URLs de pageviews.
+- Dois layouts raiz, um por idioma (`(pt)` e `(en)`), para o `<html lang>` certo. Endereços que não existem caem em
+  `src/app/global-not-found.tsx`, nos dois idiomas.
+- Tudo é estático. As partes interativas são componentes pequenos em `src/components/home/*-demo.tsx`.
+- Sem serviços pagos: as imagens já saem em WebP no tamanho certo, sem otimização de imagem do servidor.
 
-Depois da aprovação para publicar, habilite Web Analytics no projeto Vercel e configure `TESSILA_ANALYTICS_ENABLED=true` no ambiente de produção. A disponibilidade de eventos personalizados depende do plano/recursos da conta. Consulte a [configuração oficial](https://vercel.com/docs/analytics/quickstart) e a [documentação de eventos](https://vercel.com/docs/analytics/custom-events).
+## Pendente
 
-Um clique na agenda é uma intenção de contato, não uma reunião confirmada. Reuniões efetivamente marcadas precisam ser conciliadas com a agenda/CRM; não há integração de confirmação nesta landing page.
-
-## Mensagem sobre a pesquisa
-
-A aceitação do artigo foi conferida na listagem oficial do evento. A chamada da trilha informa revisão por pelo menos três integrantes do comitê de programa. A página apresenta apenas a origem científica e a aceitação após revisão por especialistas, sem nomes pessoais ou referências que levem aos detalhes de implementação. A menção se refere ao trabalho científico e não é apresentada como certificação do produto, validação clínica, prêmio ou endosso de avaliadores específicos.
-
-O agendamento utiliza a agenda pública já configurada. O e-mail institucional alternativo é `contato@tessila.com`.
+- **Preços**: os planos mostram "Preço sob consulta". Os nomes e as quantidades do plano Perfil são uma sugestão a
+  confirmar; o plano Equipe usa os números do plano de exemplo do protótipo.
+- **Redes**: a lista mostra todas as redes que a publicação suporta hoje. Confirmar se alguma deve aparecer como
+  "em breve" no lançamento.
