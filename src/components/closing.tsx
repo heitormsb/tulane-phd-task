@@ -3,6 +3,7 @@ import type { Copy } from "@/copy/pt";
 import type { Page } from "@/copy/metadata";
 import { EMAIL } from "@/copy/site";
 import { CLOSING_POSTS } from "@/content/library";
+import { LanguageLink } from "./language-link";
 import { PostImage } from "./post-image";
 import { ScheduleLink } from "./schedule-link";
 import { Logo } from "./site-header";
@@ -18,12 +19,15 @@ export function Closing({ copy }: { copy: Copy }) {
           </h2>
           <p className="lead">{copy.cta.lead}</p>
           <div className="actions">
-            <ScheduleLink copy={copy} className="button button-ink">
+            <ScheduleLink copy={copy} placement="closing" className="button button-ink">
               {copy.contact.schedule}
             </ScheduleLink>
           </div>
           <p className="closing-email">
-            {copy.contact.emailPrefix} <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+            {copy.contact.emailPrefix}{" "}
+            <a href={`mailto:${EMAIL}`} data-contact="closing_email">
+              {EMAIL}
+            </a>
           </p>
         </div>
         <div className="hand" aria-hidden="true">
@@ -47,10 +51,12 @@ export function SiteFooter({ copy, page }: { copy: Copy; page: Page }) {
       <p className="footer-tagline">{copy.footer.tagline}</p>
       <nav className="footer-nav" aria-label={copy.nav.footerLabel}>
         <Link href={copy.paths.pricing}>{copy.nav.pricing}</Link>
-        <a href={copy.other[page]} hrefLang={copy.other.lang} lang={copy.other.lang}>
+        <LanguageLink href={copy.other[page]} lang={copy.other.lang}>
           {copy.other.name}
+        </LanguageLink>
+        <a href={`mailto:${EMAIL}`} data-contact="footer_email">
+          {EMAIL}
         </a>
-        <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
       </nav>
       <p className="footer-legal">
         © {new Date().getFullYear()} {copy.footer.rights}

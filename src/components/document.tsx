@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { SiteAnalytics } from "./analytics";
 import { display, text } from "./fonts";
 import { STONE_PATHS } from "./stones";
 
@@ -24,6 +25,8 @@ export function Document({ lang, children }: { lang: string; children: ReactNode
       <body>
         <StoneDefs />
         {children}
+        {/* only the live site counts; local runs and preview deployments don't */}
+        {process.env.VERCEL_ENV === "production" ? <SiteAnalytics lang={lang} /> : null}
       </body>
     </html>
   );

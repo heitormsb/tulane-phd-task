@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Copy } from "@/copy/pt";
 import type { Page } from "@/copy/metadata";
+import { LanguageLink } from "./language-link";
 import { ScheduleLink } from "./schedule-link";
 
 // The logo files' own proportions (identidade/01_logo).
@@ -38,10 +39,10 @@ export function SiteHeader({ copy, page }: { copy: Copy; page: Page }) {
           {copy.nav.pricing}
         </Link>
       </nav>
-      <a className="lang-link" href={copy.other[page]} hrefLang={copy.other.lang} lang={copy.other.lang}>
+      <LanguageLink className="lang-link" href={copy.other[page]} lang={copy.other.lang}>
         {copy.other.name}
-      </a>
-      <ScheduleLink copy={copy} className="button button-small">
+      </LanguageLink>
+      <ScheduleLink copy={copy} placement="header" className="button button-small">
         <span className="only-wide">{copy.nav.schedule}</span>
         <span className="only-narrow">{copy.nav.scheduleShort}</span>
       </ScheduleLink>

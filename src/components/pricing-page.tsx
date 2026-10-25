@@ -33,7 +33,7 @@ export function PricingPage({ copy }: { copy: Copy }) {
                     <li key={unit}>{unit}</li>
                   ))}
                 </ul>
-                <ScheduleLink copy={copy} className={`button${i === FEATURED ? "" : " button-ink"}`}>
+                <ScheduleLink copy={copy} placement={`pricing_plan_${i + 1}`} className={`button${i === FEATURED ? "" : " button-ink"}`}>
                   {t.choose}
                 </ScheduleLink>
               </li>

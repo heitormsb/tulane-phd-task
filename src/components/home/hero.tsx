@@ -24,7 +24,9 @@ export function Hero({ copy }: { copy: Copy }) {
           </h1>
           <p className="lead hero-lead">{t.lead}</p>
           <div className="actions">
-            <ScheduleLink copy={copy}>{copy.contact.schedule}</ScheduleLink>
+            <ScheduleLink copy={copy} placement="hero">
+              {copy.contact.schedule}
+            </ScheduleLink>
             <Link className="text-link" href={copy.paths.pricing}>
               {t.secondary}
             </Link>

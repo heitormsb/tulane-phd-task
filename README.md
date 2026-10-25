@@ -50,6 +50,13 @@ Com "reduzir movimento" ligado, nada anda sozinho: o mosaico para, a fila só an
 - Dois layouts raiz, um por idioma (`(pt)` e `(en)`), para o `<html lang>` certo. Endereços que não existem caem em
   `src/app/global-not-found.tsx`, nos dois idiomas.
 - Tudo é estático. As partes interativas são componentes pequenos em `src/components/home/*-demo.tsx`.
+- **Idioma**: `src/proxy.ts` manda para `/en` quem abre `/` com o navegador fora do português. O idioma escolhido no
+  menu ou no rodapé fica no cookie `tessila-language` e vale mais que o do navegador. Robôs de busca não são
+  redirecionados.
+- **Analytics**: Vercel Web Analytics, só no site de produção (`VERCEL_ENV=production`), em
+  `src/components/analytics.tsx`. Conta as visitas e envia `contact_click` (idioma e lugar) nos links com
+  `data-contact`: agendar e e-mail. Precisa estar ligado no painel da Vercel. No plano Hobby só as visitas contam; os
+  cliques precisam do Pro.
 - Sem serviços pagos: as imagens já saem em WebP no tamanho certo, sem otimização de imagem do servidor.
 
 ## Pendente
