@@ -307,8 +307,12 @@ export const pt = {
     ],
   },
   notFound: {
-    title: "Esta página não existe",
+    eyebrow: "Erro 404 · página não encontrada",
+    heading: "Faltou uma peça aqui.",
+    lead: "O endereço que você abriu não existe ou mudou de lugar. O resto da Tessila continua inteiro.",
     home: "Ir para a página inicial",
+    pricing: "Ver os planos",
+    shortcuts: "Ou vá direto para",
   },
 };
 

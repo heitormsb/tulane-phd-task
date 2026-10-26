@@ -21,12 +21,13 @@ function StoneDefs() {
 /** The html and body shared by both languages' root layouts. */
 export function Document({ lang, children }: { lang: string; children: ReactNode }) {
   return (
-    <html lang={lang} className={`${display.variable} ${text.variable}`}>
+    // the 404 page switches lang to the visitor's language before React hydrates
+    <html lang={lang} className={`${display.variable} ${text.variable}`} suppressHydrationWarning>
       <body>
         <StoneDefs />
         {children}
         {/* only the live site counts; local runs and preview deployments don't */}
-        {process.env.VERCEL_ENV === "production" ? <SiteAnalytics lang={lang} /> : null}
+        {process.env.VERCEL_ENV === "production" ? <SiteAnalytics /> : null}
       </body>
     </html>
   );

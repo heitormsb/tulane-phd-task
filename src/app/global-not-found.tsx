@@ -1,33 +1,32 @@
 import type { Metadata } from "next";
 import { Document } from "@/components/document";
-import { Logo } from "@/components/site-header";
+import { NotFoundPage } from "@/components/not-found-page";
 import { en } from "@/copy/en";
 import { pt } from "@/copy/pt";
+import { LANGUAGE_COOKIE } from "@/copy/site";
 import "./globals.css";
 
-export const metadata: Metadata = { title: `${pt.notFound.title} · Tessila`, robots: { index: false } };
+// Next streams the title in after the page, so it can't follow the language picked below; the code reads in both.
+export const metadata: Metadata = { title: "404 · Tessila", robots: { index: false } };
 
-/** Any address that matches no page, in both languages. */
+// One static page answers every unknown address, so it carries both languages and this picks one before the page
+// paints: /en addresses are English; elsewhere the language picked on the site wins, then the browser's (as in proxy.ts).
+const PICK_LANGUAGE = `(function () {
+  try {
+    var path = location.pathname;
+    var picked = (document.cookie.match(/(?:^|; )${LANGUAGE_COOKIE}=([^;]*)/) || [])[1];
+    var english = path === "/en" || path.indexOf("/en/") === 0 || (picked ? picked === "en" : !/^pt/i.test(navigator.language || "pt"));
+    if (english) document.documentElement.lang = "en";
+  } catch (e) {}
+})();`;
+
+/** Any address that matches no page, in the visitor's language. */
 export default function GlobalNotFound() {
   return (
-    <Document lang="pt-BR">
-      <main className="not-found wrap">
-        <a href={pt.paths.home} aria-label={pt.nav.home}>
-          <Logo />
-        </a>
-        <div className="not-found-body">
-          <h1 className="heading">{pt.notFound.title}</h1>
-          <a className="text-link" href={pt.paths.home}>
-            {pt.notFound.home}
-          </a>
-          <p className="heading not-found-other" lang="en">
-            {en.notFound.title}
-          </p>
-          <a className="text-link" href={en.paths.home} lang="en">
-            {en.notFound.home}
-          </a>
-        </div>
-      </main>
+    <Document lang={pt.lang}>
+      <script dangerouslySetInnerHTML={{ __html: PICK_LANGUAGE }} />
+      <NotFoundPage copy={pt} />
+      <NotFoundPage copy={en} />
     </Document>
   );
 }

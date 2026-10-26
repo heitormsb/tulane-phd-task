@@ -302,7 +302,11 @@ export const en: Copy = {
     ],
   },
   notFound: {
-    title: "This page doesn't exist",
+    eyebrow: "Error 404 · page not found",
+    heading: "A piece is missing here.",
+    lead: "The address you opened doesn't exist or has moved. The rest of Tessila is still in one piece.",
     home: "Go to the home page",
+    pricing: "See pricing",
+    shortcuts: "Or jump straight to",
   },
 };

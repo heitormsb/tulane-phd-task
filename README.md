@@ -48,7 +48,9 @@ Com "reduzir movimento" ligado, nada anda sozinho: o mosaico para, a fila só an
 ## Como o site é feito
 
 - Dois layouts raiz, um por idioma (`(pt)` e `(en)`), para o `<html lang>` certo. Endereços que não existem caem em
-  `src/app/global-not-found.tsx`, nos dois idiomas.
+  `src/app/global-not-found.tsx` ("Faltou uma peça aqui.", com a pedra lavanda caída do mosaico). A página é uma só
+  para todos os endereços, então leva os dois idiomas e um script escolhe um antes de pintar: inglês em `/en/...`;
+  nos outros, o idioma escolhido no site e depois o do navegador.
 - Tudo é estático. As partes interativas são componentes pequenos em `src/components/home/*-demo.tsx`.
 - **Idioma**: `src/proxy.ts` manda para `/en` quem abre `/` com o navegador fora do português. O idioma escolhido no
   menu ou no rodapé fica no cookie `tessila-language` e vale mais que o do navegador. Robôs de busca não são
